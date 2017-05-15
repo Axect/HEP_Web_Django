@@ -6,10 +6,11 @@ from django.utils import timezone
 class Article(models.Model):
     author = models.ForeignKey('auth.User')
     year = models.CharField(max_length=10)
-    title = models.CharField(max_length=200)
+    index = models.CharField(max_length=5)
     people = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
     journal = models.CharField(max_length=200)
-    hlink = models.TextField()
+    hyperlink = models.TextField()
     created_date = models.DateTimeField(
         default=timezone.now
     )
