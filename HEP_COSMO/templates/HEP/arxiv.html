@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -9,13 +9,13 @@
     <title>Yonsei HEP-COSMO</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/image-effects.css" rel="stylesheet">
-    <link href="css/custom-styles.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/font-awesome-ie7.css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/image-effects.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom-styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome-ie7.css' %}" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
 </head>
 
 <body>
@@ -115,10 +115,10 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<script src="js/jquery-1.9.1.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="{% static 'js/html5shiv.js' %}"></script>
+<script src="{% static 'js/respond.min.js' %}"></script>
+<script src="{% static 'js/jquery-1.9.1.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/modernizr-2.6.2-respond-1.1.0.min.js' %}"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import 
+from .models import Article
 
 # Create your views here.
 
@@ -28,4 +28,5 @@ def research(request):
     return render(request, 'HEP/research.html', {})
 
 def publish(request):
-    return render(request, 'HEP/publish.html', {})
+    articles = Articles.objects.filter(index).order_by('index')
+    return render(request, 'HEP/publish.html', {'articles': articles})
