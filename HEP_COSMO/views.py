@@ -28,5 +28,10 @@ def research(request):
     return render(request, 'HEP/research.html', {})
 
 def publish(request):
-    articles = Article.objects.order_by('index')
-    return render(request, 'HEP/publish.html', {'articles': articles})
+    articles = Article.objects.all().order_by('index')
+    temp = []
+    for article in articles:
+        temp.append(article.year)
+    years = []
+    [years.append(year) for year in temp if year not in years]
+    return render(request, 'HEP/publish.html', {'articles': articles, 'yearlist': years})

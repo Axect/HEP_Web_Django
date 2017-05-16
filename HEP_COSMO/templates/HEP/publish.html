@@ -35,14 +35,14 @@
     <div class="row">
         <div class="site-header spacing-t">
             <!-- 3 : width : 25% -->
-            <div class="col-md-3 ">
+            <div class="col-md-3 col-sm-6">
                 <div class="site-name spacing-b">
                     <h1> Yonsei HEP-COSMO</h1>
                     <h6>Highenergy Physics and Cosmology Group</h6>
                 </div>
             </div>
             <!-- 9 : width : 75% -->
-            <div class="col-md-9">
+            <div class="col-md-9 col-sm-12">
                 <nav class="navbar pull-right " role="navigation">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -88,6 +88,33 @@
                 <h1>Publications</h1>
             </div>
             <div class=" col-sm-12 col-md-3">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="blist">
+                {% for diffyear in yearlist %}
+                    <div class="ruler"></div>
+                    <ul>
+                        <li><a href="#">{{ diffyear }}</a></li>
+                    </ul>
+                    <div class="dlist">
+                        <ul>
+                            {% for article in articles %}
+                            {% if article.year == diffyear %}
+                                <li>
+                                    {{ article.people }}, &#12300;<span><i>{{ article.title }}</i></span>&#12301; <a href="{{ article.hyperlink }}" target="_blank">{{ article.journal }}</a>
+                                </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
