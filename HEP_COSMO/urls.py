@@ -5,4 +5,11 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^index', views.index, name='index'),
     url(r'^members', views.members, name='members'),
+    url(r'^publish', views.publish, name='publish'),
+    url(r'^research', views.research, name='research'),
+    url(r'^calendar', views.calendar, name='calendar'),
+    url(r'^finedust', views.finedust, name='finedust'),
+    url(r'^link', views.link, name='link'),
+    url(r'^arxiv', views.arxiv, name='arxiv'),
+    url(r'contact', views.contact, name='contact'),
 ]
