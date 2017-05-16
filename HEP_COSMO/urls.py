@@ -2,8 +2,8 @@ from django.conf.urls import include, url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^index', views.index, name='index'),
+    url(r'^$', views.home, name='index'),
+    url(r'^index', views.home, name='index'),
     url(r'^members', views.members, name='members'),
     url(r'^publish', views.publish, name='publish'),
     url(r'^research', views.research, name='research'),

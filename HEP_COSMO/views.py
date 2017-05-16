@@ -3,7 +3,7 @@ from .models import Article
 
 # Create your views here.
 
-def index(request):
+def home(request):
     return render(request, 'HEP/index.html', {})
 
 def members(request):
@@ -28,5 +28,5 @@ def research(request):
     return render(request, 'HEP/research.html', {})
 
 def publish(request):
-    articles = Articles.objects.filter(index).order_by('index')
+    articles = Article.objects.order_by('index')
     return render(request, 'HEP/publish.html', {'articles': articles})
