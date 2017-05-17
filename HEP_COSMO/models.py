@@ -30,9 +30,17 @@ class Article(models.Model):
 
 class People(models.Model):
     """Model definition for People."""
+    POSITION_CHOICES = (
+        ('U', 'Undergraduate'),
+        ('G', 'Graduate'),
+        ('PD', 'Post-Doc'),
+        ('P', 'Professor'),
+        ('RP', 'Research Professor'),
+        ('Al', 'Alumni')
+    )
 
     # TODO: Define fields here
-    position = models.CharField(max_length=30)
+    position = models.CharField(max_length=30, choices=POSITION_CHOICES)
     index = models.CharField(max_length=5)
     name = models.CharField(max_length=30)
     email = models.CharField(max_length=100)
