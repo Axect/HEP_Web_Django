@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+admin.site.site_title = "Yonsei HEP-COSMO Admin Page"
+admin.site.site_header = "Yonsei HEP-COSMO Admin Page"
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('HEP_COSMO.urls')),
