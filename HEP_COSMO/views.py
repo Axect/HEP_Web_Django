@@ -7,7 +7,13 @@ def home(request):
     return render(request, 'HEP/index.html', {})
 
 def members(request):
-    return render(request, 'HEP/members.html', {})
+    persons = People.objects.order_by('index')
+    temp = []
+    for person in persons:
+        temp.append(person.position)
+    positions = []
+    [positions.append(position) for position in temp if position not in positions]
+    return render(request, 'HEP/members.html', {'persons': persons, 'positions': positions})
 
 def arxiv(request):
     return render(request, 'HEP/arxiv.html', {})

@@ -31,12 +31,12 @@ class Article(models.Model):
 class People(models.Model):
     """Model definition for People."""
     POSITION_CHOICES = (
-        ('U', 'Undergraduate'),
-        ('G', 'Graduate'),
-        ('PD', 'Post-Doc'),
-        ('P', 'Professor'),
-        ('RP', 'Research Professor'),
-        ('Al', 'Alumni')
+        ('Undergraduate', 'Undergraduate'),
+        ('Graduate', 'Graduate'),
+        ('Post-Doc', 'Post-Doc'),
+        ('Professor', 'Professor'),
+        ('Research Professor', 'Research Professor'),
+        ('Alumni', 'Alumni')
     )
 
     # TODO: Define fields here

@@ -85,6 +85,39 @@
         <div class="col-sm-12 col-md-12">
             <div class="blist">
                 <ul>
+                    {% for diffpos in positions %}
+                        <li><a href="#">{{ diffpos }}</a></li><br />
+                        <div class="clist">
+                            <ul>
+                                {% for person in persons %}
+                                    {% if person.position == diffpos %}
+                                        <li>{{ person.name }}</li>
+                                        <div class="dlist">
+                                            <ul>
+                                                <li>Email: {{ person.email }}</li>
+                                                <li>Location: {{ person.location }}</li>
+                                                <li>Site: {{ person.link }}</li>
+                                            </ul>
+                                        </div><br />
+                                        <div class="ruler"></div>
+                                    {% endif %}  
+                                {% endfor %} 
+                            </ul>
+                        </div>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="blist">
+                <ul>
                     <li><a href="#" >Professor</a></li><br />
                     <!--<span><img src="Members/SC_park.jpg" width="240" height="320"/></span>-->
                     <span position="relative">
