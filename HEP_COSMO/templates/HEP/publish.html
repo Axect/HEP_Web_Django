@@ -108,151 +108,26 @@
                             {% for article in articles %}
                             {% if article.year == diffyear %}
                                 <li>
-                                    {{ article.people }}, &#12300;<span><i>{{ article.title }}</i></span>&#12301; <a href="{{ article.hyperlink }}" target="_blank">{{ article.journal }}</a>
+                                    {{ article.people }}, &#12300;<span><i>{{ article.title }}</i></span>&#12301; 
+                                    {% if article.journal !=  None %}
+                                        <a href="{{ article.hyperlink }}" target="_blank">{{ article.journal }}</a>
+                                    {% endif %}
+                                    <a href="{{ article.arxivlink }}" target="_blank">{{ article.arxiv }}</a>
                                 </li>
                             {% endif %}
                             {% endfor %}
                         </ul>
                     </div>
                 {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div class="blist">
-                <div class="ruler"></div>
-                <ul>
-                    <li><a href="#">2017</a></li>
-                </ul>
-                <div class="dlist">
-                    <ul>
-                        <li>
-                            Thomas Flacke, <b>Dong Woo Kang</b>, Kyoungchul Kong, Gopolang Mohlabeng, <b>Seong Chan Park</b>, &#12300;<span><i>Electroweak Kaluza-Klein Dark Matter</i></span>&#12301; <a href="http://arxiv.org/abs/arXiv:1702.02949" target="_blank"> [1702.02949] </a>
-                        </li>
-                        <li>
-                            Doojin Kim, Jong-Chul Park, <b>Seodong Shin</b> &#12300;<span><i>Dark Matter "Transporting" Mechanism Explaining Positron Excesses"</i></span>&#12301; <a href="http://arxiv.org/abs/arXiv:1702.02944" target="_blank"> [1702.02944] </a>
-                        </li>
-                        <li>
-                            Koji Nakamura, Kenji Nishiwaki, Kin-ya Oda, <b>Seong Chan Park</b>, <b>Yasurhiro Yamamoto</b> &#12300;<span><i>Di-higgs enhancement by neutral scalar as probe of new colored sector</i></span>&#12301; <a href="http://arxiv.org/abs/arXiv:1701.06137" target="_blank"> [1701.06137] </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ruler"></div>
-                <ul>
-                    <li><a href="#">2016</a></li>
-                </ul>
-                <div class="dlist">
-                    <ul>
-                        <li>
-                            Doojin Kim, Jong-Chul Park, <b>Seodong Shin</b> &#12300;<span><i>Dark Matter "Collider" from Inelastic Boosted Dark Matter</i></span>&#12301; <a href="http://arxiv.org/abs/arXiv:1612.06867" target="_blank"> [1612.06867] </a>
-                        </li>
-                        <li>
-                            Radovan Dermisek, Enrico Lunghi, <b>Seodong Shin</b> &#12300;<span><i>New constraints and discovery potential for Higgs to Higgs cascade decays through vectorlike leptons</i></span>&#12301; <a href="http://dx.doi.org/10.1007/JHEP10(2016)081" target="_blank"> JHEP 1610 (2016) 081 </a> <a href="http://arxiv.org/abs/arXiv:1608.00662" target="_blank">[1608.00662]</a>
-                        </li>
-                        <li>
-                            Benjamin Fuks, <b>Dong Woo Kang</b>, <b>Seong Chan Park</b>, Min-Seok Seo &#12300;<span><i>Investigating the jet activity accompanying the production at the LHC of a massive scalar particle decaying into photons</i></span>&#12301; <a href="http://dx.doi.org/10.1016/j.physletb.2016.08.056" target="_blank"> Phys.Lett. B761 (2016) 344-349 </a> <a href="http://arxiv.org/abs/arXiv:1608.00084" target="_blank">[1608.00084]</a>
-                        </li>
-                        <li>
-                            <b>Seong Chan, Park</b> &#12300;<span><i>Who Ordered Dark Matter?: The Necessity of Dark Matter</i></span>&#12301; <a href="http://www.npsm-kps.org/journal/view.html?volume=66&number=8&spage=942&year=2016" target="_blank"> New Physics: Sae Mulli 2016; 66: 942~945 </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ruler"></div>
-                <ul>
-                    <li><a href="#">2015</a></li>
-                </ul>
-                <div class="dlist">
-                    <ul>
-                        <li>
-                            Shinya Kanemura, Kenji Nishiwaki, Hiroshi Okada, Yuta Orikasa, <b>Seong Chan Park</b> &#12300;<span><i>LHC 750 GeV Diphoton excess in a radiative seesaw model</i></span>&#12301; <a href="http://dx.doi.org/10.1093/ptep/ptw164" target="_blank">PTEP 2016 (2016) no.12, 123B04</a> <a href="http://arxiv.org/abs/arXiv:1512.09048" target="_blank">[1512.09048]</a>
-
-                        </li>
-                        <li>
-                            Jong-Chul Park, <b>Seong Chan Park</b> &#12300;<span><i>Indirect signature of dark matter with the diphoton resonance at 750 GeV</i></span>&#12301; <a href="http://dx.doi.org/10.1016/j.dark.2016.08.002" target="_blank">Phys.Dark Univ. 14 (2016) 4-10</a> <a href="http://arxiv.org/abs/arXiv:1512.08117" target="_blank">[1512.08117]</a>
-                        </li>
-                        <li>
-                            Hyun Min Lee, Doojin Kim, Kyoungchul Kong, <b>Seong Chan Park</b>, &#12300;<span><i>Diboson Excesses Demystified in Effective Field Theory Approach</i></span>&#12301; <a href="http://dx.doi.org/10.1007/JHEP11(2015)150" target="_blank">JHEP 1511 (2015) 150</a> <a href="http://arxiv.org/abs/arXiv:1507.06312" target="_blank">[1507.06312]</a>
-                        </li>
-                        <li>
-                            Jong-Chul Park, Jongkuk Kim, <b>Seong Chan Park</b> &#12300;<span><i>Galactic center GeV gamma-ray excess from dark matter with gauged lepton numbers</i></span>&#12301; <a href="http://dx.doi.org/10.1016/j.physletb.2015.11.035" target="_blank">Phys.Lett. B752 (2016) 59-65</a> <a href="https://arxiv.org/abs/1505.04620" target="_blank">[1505.04620]</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ruler"></div>
-                <ul>
-                    <li><a href="#">2014</a></li>
-                </ul>
-                <div class="dlist">
-                    <ul>
-                        <li>
-                            Nicolas Greiner, Kyoungchul Kong, Jong-Chul Park, <b>Seong Chan Park</b>, Jan-Christopher Winter. &#12300;<span><i>Model-Independent Production of a Top-Philic Resonance at the LHC.</i></span>&#12301; <a href="http://dx.doi.org/10.1007/JHEP04(2015)029" target="_blank">JHEP 1504 (2015) 029</a> <a href="https://arxiv.org/abs/1410.6099" target="_blank">[1410.6099]</a>
-                        </li>
-                        <li>
-                            Jong-Chul Park, <b>Seong Chan Park</b>. &#12300;<span><i>Superheavy Dark Matter in Light of Dark Radiation</i></span>&#12301; <a href="http://dx.doi.org/10.3938/jkps.65.805" target="_blank">J.Korean Phys.Soc. 65 (2014) 805-808</a> <a href="https://arxiv.org/abs/1410.5908" target="_blank">[1410.5908]</a>
-                        </li>
-                        <li>
-                            Yuta Hamada, Hikaru Kawai, Kin-ya Oda, <b>Seong Chan Park</b>. &#12300;<span><i>Higgs inflation from Standard Model criticality</i></span>&#12301; <a href="http://dx.doi.org/10.1103/PhysRevD.91.053008" target="_blank">Phys.Rev. D91 (2015) 053008</a> <a href="https://arxiv.org/abs/1408.4864" target="_blank">[1408.4864]</a>
-                        </li>
-                        <li>
-                            Eung Jin Chun, Sunghoon Jung, Hyun Min Lee, <b>Seong Chan Park</b>. &#12300;<span><i>Stop and Sbottom LSP with R-parity Violation</i></span>&#12301; <a href="http://dx.doi.org/10.1103/PhysRevD.90.115023" target="_blank">Phys.Rev. D90 (2014) 115023</a> <a href="https://arxiv.org/abs/1408.4508" target="_blank">[1408.4508]</a>
-                        </li>
-                        <li>
-                            Carsten Rott, Kazunori Kohri, <b>Seong Chan Park</b>. &#12300;<span><i>Superheavy dark matter and IceCube neutrino signals: Bounds on decaying dark matter</i></span>&#12301; <a href="http://dx.doi.org/10.1103/PhysRevD.92.023529" target="_blank">Phys.Rev. D92 (2015) no.2, 023529</a> <a href="https://arxiv.org/abs/1408.4575" target="_blank">[1408.4575]</a>
-                        </li>
-                        <li>
-                            Thomas Flacke, Kyoungchul Kong, <b>Seong Chan Park</b>. &#12300;<span><i>A Review on Non-Minimal Universal Extra Dimensions</i></span>&#12301; <a href="http://dx.doi.org/10.1142/S0217732315300037" target="_blank">Mod.Phys.Lett. A30 (2015) no.05, 1530003</a> <a href="https://arxiv.org/abs/1408.4024" target="_blank">[1408.4024]</a>
-                        </li>
-                        <li>
-                            Yuta Hamada, Hikaru Kawai, Kin-ya Oda, <b>Seong Chan Park</b>. &#12300;<span><i>Higgs Inflation is Still Alive after the Results from BICEP2</i></span>&#12301; <a href="http://dx.doi.org/10.1103/PhysRevLett.112.241301" target="_blank">Phys.Rev.Lett. 112 (2014) no.24, 241301</a> <a href="https://arxiv.org/abs/1403.5043" target="_blank">[1403.5043]</a>
-                        </li>
-                        <li>
-                            Jong-Chul Park, <b>Seong Chan Park</b>, Kyoungchul Kong.&#12300;<span><i>X-ray line signal from 7 keV axino dark matter decay</i></span>&#12301; <a href="http://dx.doi.org/10.1016/j.physletb.2014.04.037" target="_blank">Phys.Lett. B733 (2014) 217-220</a> <a href="https://arxiv.org/abs/1403.1536" target="_blank">[1403.1536]</a>
-                        </li>
-                        <li>
-                            Hyun Min Lee, <b>Seong Chan Park</b>, Wan-Il Park. &#12300;<span><i>Cluster X-ray line at $3.5~\mathrm{keV}$ from axion-like dark matter</i></span>&#12301; <a href="http://dx.doi.org/10.1140/epjc/s10052-014-3062-5" target="_blank">Eur.Phys.J. C74 (2014) 3062</a> <a href="https://arxiv.org/abs/1403.0865" target="_blank">[1403.0865]</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ruler"></div>
-                <ul>
-                    <li><a href="#">2013</a></li>
-                </ul>
-                <div class="dlist">
-                    <ul>
-                        <li>
-                            Sanghyeon Chang, Sin Kyu Kang, Jong-Phil Lee, Kang Young Lee, <b>Seong Chan Park</b>, Jeonghyeon Song. &#12300;<span><i>Two Higgs doublet models for the LHC Higgs boson data at $\sqrt{s}=$ 7 and 8 TeV</i></span>&#12301; <a href="http://dx.doi.org/10.1007/JHEP09(2014)101" target="_blank">JHEP 1409 (2014) 101</a> <a href="https://arxiv.org/abs/1310.3374" target="_blank">[1310.3374]</a>
-                        </li>
-                        <li>
-                            Thomas Flacke, Kyoungchul Kong, <b>Seong Chan Park</b>. &#12300;<span><i>126 GeV Higgs in Next-to-Minimal Universal Extra Dimensions</i></span>&#12301; <a href="http://dx.doi.org/10.1016/j.physletb.2013.11.046" target="_blank">Phys.Lett. B728 (2014) 262-267</a> <a href="https://arxiv.org/abs/1309.7077" target="_blank">[1309.7077]</a>
-                        </li>
-                        <li>
-                            Jong-Chul Park, <b>Seong Chan Park</b>. &#12300;<span><i>A testable scenario of WIMPZILLA with Dark Radiation</i></span>&#12301; <a href="http://dx.doi.org/10.1016/j.physletb.2013.11.027" target="_blank">Phys.Lett. B728 (2014) 41-44.</a> <a href="https://arxiv.org/abs/1305.5013" target="_blank">[1305.5013]</a>
-                        </li>
-                        <li>
-                            Thomas Flacke, Kyoungchul Kong, <b>Seong Chan Park</b>. &#12300;<span><i>Phenomenology of Universal Extra Dimensions with Bulk-Masses and Brane-Localized Terms</i></span>&#12301; <a href="http://dx.doi.org/10.1007/JHEP05(2013)111" target="_blank">JHEP 1305 (2013) 111</a> <a href="https://arxiv.org/abs/1303.0872" target="_blank">[1303.0872]</a>
-                        </li>
-                        <li>
-                            Swarup Kumar Majee, <b>Seong Chan Park</b>. &#12300;<span><i> Dilepton + jet signature of Split-UED at the LHC</i></span>&#12301; <a href="https://arxiv.org/abs/1301.6421" target="_blank">[1301.6421]</a>
-                        </li>
-                        <li>
-                            Jinsu Kim, Yoonbai Kim, <b>Seong Chan Park</b>. &#12300;<span><i>Two-field inflation with non-minimal coupling</i></span>&#12301; <a href="http://dx.doi.org/10.1088/0264-9381/31/13/135004" target="_blank">Class.Quant.Grav. 31 (2014) 135004</a> <a href="https://arxiv.org/abs/1310.3374" target="_blank">[1301.5472]</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ruler"></div>
                 <br />
-                <p>
+                <div class="ruler"></div>
+                 <p>
                     You can find the full list from InspireHEP [<a href="https://goo.gl/AS6UKo" target="_blank">here</a>]
                 </p>
             </div>
         </div>
     </div>
 </div>
-<br/>
 
 <div class="container">
     <div class="site-footer">
