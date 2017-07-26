@@ -41,7 +41,7 @@ def publish(request):
     persons = People.objects.all().order_by('index')
     temp = []
     personlist = []
-    [personlist.append(person.name) for person in persons]
+    [personlist.append(' ' + person.name) for person in persons]
     for article in articles:
         temp.append(article.year)
     years = []
