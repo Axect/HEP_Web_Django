@@ -21,6 +21,9 @@ def arxiv(request):
 def calendar(request):
     return render(request, 'HEP/calendar.html', {})
 
+def seminar(request):
+    return render(request, 'HEP/seminar.html', {})
+
 def contact(request):
     return render(request, 'HEP/contact.html', {})
 

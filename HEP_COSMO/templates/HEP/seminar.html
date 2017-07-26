@@ -16,18 +16,6 @@
     <link href="{% static 'css/font-awesome-ie7.css' %}" rel="stylesheet">
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
-    <!-- TeX -->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js">
-        MathJax.Hub.Config({
-            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            },
-            "HTML-CSS": { availableFonts: ["TeX"] }
-        });
-    </script>
 </head>
 
 <body>
@@ -55,16 +43,16 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="index.html">Home</a></li>
-                            <li class="dropdown ">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown">About <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="members.html">Members</a></li>
                                     <li><a href="research.html">Research</a></li>
-                                    <li class="active"><a href="publish.html">Publications</a></li>
+                                    <li><a href="publish.html">Publications</a></li>
                                 </ul>
                             </li>
                             <li><a href="calendar.html">Calendar</a></li>
-                            <li><a href="seminar.html">Seminar</a></li>
+                            <li class="active"><a href="seminar.html">Seminar</a></li>
                             <li class="dropdown ">
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Site<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -86,48 +74,48 @@
     <div class="main-title">
         <div class="row">
             <div class="col-sm-12 col-md-9">
-                <h1>Publications</h1>
+                <h1>Seminar</h1>
             </div>
             <div class=" col-sm-12 col-md-3">
             </div>
         </div>
     </div>
+    <div class="ruler"></div>
 </div>
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12 col-sm-12">
+        <div class="col-sm-12 col-md-12">
             <div class="blist">
-                {% for diffyear in yearlist %}
-                    <div class="ruler"></div>
-                    <ul>
-                        <li><a href="#">{{ diffyear }}</a></li>
-                    </ul>
-                    <div class="dlist">
-                        <ul>
-                            {% for article in articles %}
-                            {% if article.year == diffyear %}
-                                <li>
-                                    {{ article.people }}, &#12300;<span><i>{{ article.title }}</i></span>&#12301; 
-                                    {% if article.journal !=  None %}
-                                        <a href="{{ article.hyperlink }}" target="_blank">{{ article.journal }}</a>
-                                    {% endif %}
-                                    <a href="{{ article.arxivlink }}" target="_blank">{{ article.arxiv }}</a>
-                                </li>
-                            {% endif %}
-                            {% endfor %}
-                        </ul>
-                    </div>
-                {% endfor %}
-                <br />
                 <div class="ruler"></div>
-                 <p>
-                    You can find the full list from InspireHEP [<a href="https://goo.gl/AS6UKo" target="_blank">here</a>]
-                </p>
+                <ul>
+                    <li><a href="#">2017 Summer</a></li>
+                </ul>
+            </div>
+            <div class="elist">
+                <br>
+                <p>Lecture on Electroweak Baryogenesis and Gravity Waves</p>
+                <ul>
+                    <li><span>- August 16(Wednesday at 2:00PM), 102-106 in CAU</span></li>
+                    <li><span>- Dr. Ligong Bian (Chung-Ang University)</span></li>
+                    <li><span>- References: <a href="https://arxiv.org/abs/gr-qc/0107033v1" target="_blank">[0107033v1]</a> <a href="https://arxiv.org/abs/1206.2942" target="_blank">[1206.2942]</a></span></li>    
+                    <li>
+                        <span>- Schedule:</span>
+                        <ul>
+                            <li>PM 2:00-3:30 &nbsp;  Finite temperature field theory and electroweak first order phase transition</li>
+                            <li>PM 4:00-5:30 &nbsp; Gravity wave signals from electroweak phase transition</li>
+                            <li>PM 6:00-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dinner</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
 
 <div class="container">
     <div class="site-footer">
