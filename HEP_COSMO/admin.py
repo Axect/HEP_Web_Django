@@ -25,3 +25,16 @@ class PeopleAdmin(admin.ModelAdmin):
     search_fields = ('position', 'name')
 
 admin.site.register(People, PeopleAdmin)
+
+
+class SeminarAdmin(admin.ModelAdmin):
+    '''
+        Admin View for Seminar
+    '''
+    list_display = ('date_start','date_end','place', 'title', 'lecturer', 'published_date')
+    list_display_links = ('date_start', 'date_end', 'place', 'title')
+    list_filter = ('date_start',)
+    search_fields = ('title', 'lecturer')
+
+admin.site.register(Seminar, SeminarAdmin)
+

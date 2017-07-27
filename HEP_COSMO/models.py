@@ -61,3 +61,33 @@ class People(models.Model):
 
     def __str__(self):
         return self.name
+
+class Seminar(models.Model):
+    """Model definition for Seminar."""
+
+    # TODO: Define fields here
+    author = models.ForeignKey('auth.User')
+    title = models.CharField(max_length=100)
+    date_start = models.CharField(max_length=50)
+    date_end = models.CharField(max_length=50, null=True, blank=True)
+    place = models.CharField(max_length=50)
+    lecturer = models.CharField(max_length=100)
+    ref = models.CharField(max_length=200, null=True, blank=True)
+    ref_link = models.TextField(null=True, blank=True)
+    schedule = models.TextField()
+    created_date = models.DateTimeField(
+        default=timezone.now
+    )
+    published_date = models.DateTimeField(
+        blank=True, null=True
+    )
+
+    class Meta:
+        """Meta definition for Seminar."""
+
+        verbose_name = 'Seminar'
+        verbose_name_plural = 'Seminars'
+
+    def __unicode__(self):
+        """Unicode representation of Seminar."""
+        pass
