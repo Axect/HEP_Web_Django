@@ -25,7 +25,7 @@ SECRET_KEY = 'fkx^on2kgp!dkp-h0=90@t*$fx8)#c!cy^#$^h=(918$xi00bv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nexus.yonsei.ac.kr']
 
 
 # Application definition
