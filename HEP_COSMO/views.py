@@ -24,7 +24,7 @@ def calendar(request):
 def seminar(request):
     seminars = Seminar.objects.all().order_by('date_start')
     for seminar in seminars:
-        seminar.zipped = zip(seminar.ref, seminar.ref_link)
+        seminar.zipped = list(zip(seminar.ref, seminar.ref_link))
     return render(request, 'HEP/seminar.html', {'seminars': seminars})
 
 def contact(request):
