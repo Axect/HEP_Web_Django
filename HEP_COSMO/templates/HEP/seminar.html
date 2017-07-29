@@ -119,11 +119,9 @@
                         <span>- Topics:</span>
                         <ul>
                             {% for topic in seminar.topic %}
-                            {% if topic != None}
-                            {% with topic|strip as tp %}
-                            <li>{{tp}}</li>
-                            {% endwith %}
-                            {% endif %}
+                                {% if topic != None}
+                                <li>{{topic|strip}}</li>
+                                {% endif %}
                             {% endfor %}
                         </ul>
                     </li>
@@ -131,11 +129,9 @@
                         <span>- Schedules:</span>
                         <ul>
                             {% for schedule in seminar.schedule %}
-                            {% if schedule != None %}
-                            {% with schedule|strip as sch %}
-                            <li>{{sch}}</li>
-                            {% endwith %}
-                            {% endif %}
+                                {% if schedule != None %}
+                                    <li>{{schedule|strip}}</li>
+                                {% endif %}
                             {% endfor %}
                         </ul>
                     </li>
