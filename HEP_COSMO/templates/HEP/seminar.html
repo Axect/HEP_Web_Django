@@ -109,12 +109,11 @@
                     <li><span>- {{seminar.lecturer}}  </span></li>
                     <li><span> 
                         - References: 
-                        {% with seminar.zipped as sem %}
-                            {{sem}}
-                            <!-- {% if ref != none %}
+                        {% for ref, link in seminar.zipped %}
+                             {% if ref != none %}
                                 <a href="{{link}}", target="_blank">{{ref}}</a>&nbsp;
-                            {% endif %} -->
-                        {% endwith %}
+                            {% endif %} 
+                        {% endfor %}
                     </span></li>
                     <li>
                         <span>- Topics:</span>
