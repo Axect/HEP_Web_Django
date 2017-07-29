@@ -109,7 +109,7 @@
                     <li><span>- {{seminar.lecturer}}  </span></li>
                     <li><span> 
                         - References: 
-                        {% with seminar.zipped|split:"," as sem %}
+                        {% with seminar.zipped as sem %}
                             {{sem}}
                             <!-- {% if ref != none %}
                                 <a href="{{link}}", target="_blank">{{ref}}</a>&nbsp;
