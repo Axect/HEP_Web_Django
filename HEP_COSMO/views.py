@@ -25,9 +25,8 @@ def seminar(request):
     seminars = Seminar.objects.all().order_by('date_start')
     reflist = []
     linklist = []
-    for ref, link in zip(seminars.ref, seminars.ref_link):
-        reflist.append(ref)
-        linklist.append(link)
+    [reflist.append(seminar.ref) for seminar in seminars]
+    [linklist.append(seminar.ref_link) for seminar in seminars]
     return render(request, 'HEP/seminar.html', {'seminars': seminars, 'zipped_list' : zip(reflist, linklist)})
 
 def contact(request):
