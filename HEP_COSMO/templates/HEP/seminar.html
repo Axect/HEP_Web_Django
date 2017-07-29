@@ -110,6 +110,7 @@
                     <li><span> 
                         - References: 
                         {% for ref, link in seminar.zipped%}
+                            {{ref}}, {{link}}
                             {% if ref != none %}
                                 <a href="{{link}}", target="_blank">{{ref}}</a>&nbsp;
                             {% endif %}
