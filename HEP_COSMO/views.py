@@ -23,7 +23,8 @@ def calendar(request):
 
 def seminar(request):
     seminars = Seminar.objects.all().order_by('date_start')
-    return render(request, 'HEP/seminar.html', {'seminars': seminars}
+    seminars.zipped = zip(seminars.ref, seminars.ref_link)
+    return render(request, 'HEP/seminar.html', {'seminars': seminars})
 
 def contact(request):
     return render(request, 'HEP/contact.html', {})
