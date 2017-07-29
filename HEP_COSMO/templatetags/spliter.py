@@ -15,6 +15,6 @@ def split(string, sep):
 def is_in(var, obj):
     return var in obj
 
-@register.filter
+@register.filter(name='strip')
 def strip(string):
     return string.strip()
