@@ -110,9 +110,9 @@
                     <li><span> 
                         - References: 
                         {% for ref, link in zipped_list %}
-                        {% if ref != none %}
-                        <a href="{{link}}", target="_blank">{{ref}}</a>&nbsp;
-                        {% endif %}
+                            {% if ref != none %}
+                                <a href="{{link}}", target="_blank">{{ref}}</a>&nbsp;
+                            {% endif %}
                         {% endfor %}
                     </span></li>
                     <li>
@@ -120,7 +120,7 @@
                         <ul>
                             {% for topic in seminar.topic %}
                                 {% if topic != None}
-                                <li>{{topic|strip}}</li>
+                                    <li>{{topic|strip}}</li>
                                 {% endif %}
                             {% endfor %}
                         </ul>
