@@ -109,7 +109,7 @@
                     <li><span>- {{seminar.lecturer}}  </span></li>
                     <li><span> 
                         - References: 
-                        {% for ref, link in zipped_list %}
+                        {% for ref, link in seminars.zipped %}
                             {% if ref != none %}
                                 <a href="{{link}}", target="_blank">{{ref}}</a>&nbsp;
                             {% endif %}
@@ -118,21 +118,25 @@
                     <li>
                         <span>- Topics:</span>
                         <ul>
-                            {% for topic in seminar.topic %}
+                            {% with seminar.topic|split:',' as topics %}
+                            {% for topic in topics %}
                                 {% if topic != None %}
                                     <li>{{topic|strip}}</li>
                                 {% endif %}
                             {% endfor %}
+                            {% endwith %}
                         </ul>
                     </li>
                     <li>
                         <span>- Schedules:</span>
                         <ul>
-                            {% for schedule in seminar.schedule %}
+                            {% with seminar.schedule|split:',' as schedules%}
+                            {% for schedule in schedules %}
                                 {% if schedule != None %}
                                     <li>{{schedule|strip}}</li>
                                 {% endif %}
                             {% endfor %}
+                            {% endwith %}
                         </ul>
                     </li>
                 </ul>    
