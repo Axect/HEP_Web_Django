@@ -86,12 +86,53 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            <div class="blist">
+            <!-- <div class="blist">
                 <div class="ruler"></div>
                 <ul>
                     <li><a href="#">2017 Summer</a></li>
                 </ul>
+            </div> -->
+            
+            {% for seminar in seminars %}
+            <div class="elist">
+                <br>
+                <p>{{seminar.title}}</p>
+                <ul>
+                    <li><span>
+                        - {{seminar.date_start}}
+                        {% if seminar.date_end != None%}
+                            - {{seminar.date_end}} 
+                        {% endif %}
+                        &nbsp;, {{seminar.place}}
+                    </span></li>
+                    <li><span>- {{seminar.lecturer}}  </span></li>
+                    <li><span> 
+                        - References: 
+                        {% for ref, link in zipped_list %}
+                        <a href="{{link}}", target="_blank">{{ref}}</a>&nbsp;
+                        {% endfor %}
+                    </span></li>
+                    <li>
+                        <span>- Topics:</span>
+                        <ul>
+                            {% for topic in seminar.topic %}
+                            <li>{{topic|strip}}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li>
+                        <span>- Schedules:</span>
+                        <ul>
+                            {% for schedule in seminar.schedule %}
+                            <li>{{seminar.schedule|strip}}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>    
             </div>
+            {% endfor %}
+                
+
             <div class="elist">
                 <br>
                 <p>Lecture on Electroweak Baryogenesis and Gravity Waves</p>

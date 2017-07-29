@@ -74,7 +74,9 @@ class Seminar(models.Model):
     lecturer = models.CharField(max_length=100)
     ref = models.CharField(max_length=200, null=True, blank=True)
     ref_link = models.TextField(null=True, blank=True)
+    topic = models.TextField(null=True, blank=True)
     schedule = models.TextField()
+    note = models.TextField(null=True, blank=True)
     created_date = models.DateTimeField(
         default=timezone.now
     )

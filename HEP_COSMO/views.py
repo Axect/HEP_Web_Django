@@ -22,7 +22,13 @@ def calendar(request):
     return render(request, 'HEP/calendar.html', {})
 
 def seminar(request):
-    return render(request, 'HEP/seminar.html', {})
+    seminars = Seminar.objects.all().order_by('date_start')
+    reflist = []
+    linklist = []
+    for ref, link in zip(seminars.ref, seminars.ref_link):
+        reflist.append(ref)
+        linklist.append(link)
+    return render(request, 'HEP/seminar.html', {'seminars': seminars, 'zipped_list' : zip(reflist, linklist)})
 
 def contact(request):
     return render(request, 'HEP/contact.html', {})
@@ -42,6 +48,7 @@ def publish(request):
     temp = []
     personlist = []
     [personlist.append(' ' + person.name) for person in persons]
+    [personlist.append(person.name) for person in persons]
     for article in articles:
         temp.append(article.year)
     years = []

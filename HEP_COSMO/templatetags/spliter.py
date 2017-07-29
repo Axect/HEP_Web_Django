@@ -14,3 +14,7 @@ def split(string, sep):
 @register.filter
 def is_in(var, obj):
     return var in obj
+
+@register.filter
+def strip(string):
+    return string.strip()
