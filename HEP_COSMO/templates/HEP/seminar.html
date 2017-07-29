@@ -115,7 +115,6 @@
                                 <a href="{{link}}", target="_blank">{{ref}}</a>&nbsp;
                             {% endif %} -->
                         {% endwith %}
-                        <!-- {% endfor %} -->
                     </span></li>
                     <li>
                         <span>- Topics:</span>
@@ -132,7 +131,7 @@
                     <li>
                         <span>- Schedules:</span>
                         <ul>
-                            {% with seminar.schedule|split:',' as schedules%}
+                            {% with seminar.schedule|split:',' as schedules %}
                             {% for schedule in schedules %}
                                 {% if schedule != None %}
                                     <li>{{schedule|strip}}</li>
