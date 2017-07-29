@@ -119,7 +119,7 @@
                         <span>- Topics:</span>
                         <ul>
                             {% for topic in seminar.topic %}
-                                {% if topic != None}
+                                {% if topic != None %}
                                     <li>{{topic|strip}}</li>
                                 {% endif %}
                             {% endfor %}
