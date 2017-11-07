@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load spliter %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -42,8 +43,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index">Home</a></li>
-                            <li class="dropdown ">
+                            <li><a href="index">Home</a></li>
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown">About <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="members">Members</a></li>
@@ -52,7 +53,13 @@
                                 </ul>
                             </li>
                             <li><a href="calendar">Calendar</a></li>
-                            <li><a href="seminar">Seminar</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="seminar">Seminar</a></li>
+                                    <li class="active"><a href="snail">Snail Lecture</a></li>
+                                </ul>
+                            </li>
                             <li class="dropdown ">
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Site<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -69,34 +76,89 @@
         </div>
     </div>
 </div>
+
 <div class="container">
-    <div class="banner">
-        <div class="banner-item">
-            <div class="box1 radi-c1">
-                <h3>Dark Matter Theory</h3>
+    <div class="main-title">
+        <div class="row">
+            <div class="col-sm-12 col-md-9">
+                <h1>Seminar</h1>
             </div>
-        </div>
-        <div class="banner-item">
-            <div class="box2 radi-c2">
-                <h3>Cosmological Inflation</h3>
-            </div>
-        </div>
-        <div class="banner-item">
-            <div class="box3 radi-c4">
-                <h3>LHC and Future Collider Physics</h3>
-            </div>
-        </div>
-        <div class="banner-item ">
-            <div class="box4 radi-c3">
-                <h3>Beyond the Standard Model Physics</h3>
+            <div class=" col-sm-12 col-md-3">
             </div>
         </div>
     </div>
-</div><br />
+    <div class="ruler"></div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <!-- <div class="blist">
+                <div class="ruler"></div>
+                <ul>
+                    <li><a href="#">2017 Summer</a></li>
+                </ul>
+            </div> -->
+
+            {% for seminar in seminars %}
+            <div class="elist">
+                <br>
+                <p>{{seminar.title}}</p>
+                <ul>
+                    <li><span>
+                        - {{seminar.date_start}}
+                        {% if seminar.date_end != None%}
+                            - {{seminar.date_end}}
+                        {% endif %}
+                        ,&nbsp; {{seminar.place}}
+                    </span></li>
+                    <li><span>- {{seminar.lecturer}}  </span></li>
+                    <li><span>
+                        - References:
+                        {% for ref, link in seminar.zipped %}
+                             {% if ref != none %}
+                                <a href="{{link}}", target="_blank">{{ref}}</a>,&nbsp;
+                            {% endif %}
+                        {% endfor %}
+                    </span></li>
+                    <li>
+                        <span>- Topics:</span>
+                        <ul>
+                            {% with seminar.topic|split:',' as topics %}
+                            {% for topic in topics %}
+                                {% if topic != None %}
+                                    <li>{{topic|strip}}</li>
+                                {% endif %}
+                            {% endfor %}
+                            {% endwith %}
+                        </ul>
+                    </li>
+                    <li>
+                        <span>- Schedules:</span>
+                        <ul>
+                            {% with seminar.schedule|split:',' as schedules %}
+                            {% for schedule in schedules %}
+                                {% if schedule != None %}
+                                    <li>{{schedule|strip}}</li>
+                                {% endif %}
+                            {% endfor %}
+                            {% endwith %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="ruler"></div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
 
 <div class="container">
     <div class="site-footer">
-        <div class="ruler"></div><br />
         <div class="row">
             <div class="col-sm-6 col-md-6">
                 <div class="block">
