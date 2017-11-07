@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'^link', views.link, name='link'),
     url(r'^arxiv', views.arxiv, name='arxiv'),
     url(r'^contact', views.contact, name='contact'),
+    url(r'^contact', views.snail, name='snail'),
 ]

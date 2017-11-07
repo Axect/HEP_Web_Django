@@ -27,6 +27,9 @@ def seminar(request):
         seminar.zipped = zip(seminar.ref.split(","), seminar.ref_link.split((",")))
     return render(request, 'HEP/seminar.html', {'seminars': seminars})
 
+def snail(request):
+    return render(request, 'HEP/snail.html', {})
+
 def contact(request):
     return render(request, 'HEP/contact.html', {})
 
