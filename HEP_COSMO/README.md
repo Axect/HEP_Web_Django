@@ -3,7 +3,7 @@
 
 # 1. Django
 
-Refer to <a href="https://github.com/Axect/Webtutorial/blob/master/Tutorial2/guide.md">Django Guide</a>
+Refer to <a href="https://github.com/Axect/Webtutorial/">Django Guide</a>
 
 # 2. Apache
 
