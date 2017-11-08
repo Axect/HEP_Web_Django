@@ -539,7 +539,7 @@ ul{
 		Banner Styles
 -------------------------------------------------------*/
 .banner{
-    background: url(../images/banner.jpg) no-repeat;
+    background: url(../images/banner3.jpg) no-repeat;
     height: 660px;
     border-radius: 5px;
 }
@@ -567,6 +567,8 @@ ul{
     color: #fff;
     position: absolute;
     bottom: 0;
+
+
 }
 .box1:hover, .box2:hover, .box3:hover, .box4:hover{
     transition:all 1s;

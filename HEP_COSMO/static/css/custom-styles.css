@@ -539,14 +539,13 @@ ul{
 		Banner Styles
 -------------------------------------------------------*/
 .banner{
-
     background: url(../images/banner3.jpg) no-repeat;
-    height: 440px;
+    height: 660px;
     border-radius: 5px;
 }
 .box1, .box2, .box3, .box4{
     width: 50%;
-    height: 220px;
+    height: 330px;
     background: url(../images/dot.png);
     float: left;
     position: relative;
