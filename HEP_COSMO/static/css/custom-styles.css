@@ -210,6 +210,32 @@ ul{
     font-weight:none;
 }
 
+/* For Index */
+.ilist{
+
+}
+.ilist ul {
+    list-style-type: square;
+    padding-right: 15px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.ilist ul li{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 8px;
+}
+.ilist ul li a {
+    display: inline;
+    border-style: none;
+    list-style: none;
+    font-size: 15px;
+}
+.ilist ul li span {
+    color: rgb(150,10,10);
+}
+
 .wrapper{
     padding: 60px 0;
 }
