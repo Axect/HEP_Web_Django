@@ -567,8 +567,6 @@ ul{
     color: #fff;
     position: absolute;
     bottom: 0;
-
-
 }
 .box1:hover, .box2:hover, .box3:hover, .box4:hover{
     transition:all 1s;
