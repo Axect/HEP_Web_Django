@@ -4408,8 +4408,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
     }
     .site-header h3{text-align:center !important;margin-top: 8px !important;
     }
-    .banner{background-size:100% !important; height:660px !important;}
-    .box1, .box2, .box3, .box4 {height: 330px !important;}
+    .banner{background-size:100% !important; height:220px !important;}
+    .box1, .box2, .box3, .box4 {height: 107px !important;}
     .site-header{margin:0 !important;}
     .navbar{width:100% !important;background: #eee !important; border-radius: 5px !important; margin-bottom: 30px !important;  }
     .featured-blocks .thumbnail {margin-bottom: 30px !important;}
