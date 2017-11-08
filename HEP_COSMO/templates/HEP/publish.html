@@ -65,7 +65,13 @@
                                 </ul>
                             </li>
                             <li><a href="calendar">Calendar</a></li>
-                            <li><a href="seminar">Seminar</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Schedule <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="seminar">Seminar</a></li>
+                                    <li><a href="snail">Snail Lecture</a></li>
+                                </ul>
+                            </li>
                             <li class="dropdown ">
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Site<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -118,7 +124,7 @@
                                         {% endif %}
                                         {% endfor %}
                                     {% endwith %}
-                                     &#12300;<span><i>{{ article.title }}</i></span>&#12301; 
+                                     &#12300;<span><i>{{ article.title }}</i></span>&#12301;
                                     {% if article.journal !=  None %}
                                         <a href="{{ article.hyperlink }}" target="_blank">{{ article.journal }}</a>
                                     {% endif %}
