@@ -47,7 +47,7 @@ class People(models.Model):
     location = models.CharField(max_length=20)
     link = models.TextField(null=True, blank=True)
     img = models.TextField(null=True, blank=True)
-    
+
 
     class Meta:
         """Meta definition for People."""
@@ -93,3 +93,28 @@ class Seminar(models.Model):
     def __unicode__(self):
         """Unicode representation of Seminar."""
         pass
+
+class Snail(models.Model):
+    """Model definition for Snail"""
+
+    author = models.ForeignKey('auth.User')
+    year = models.CharField(max_length=10)
+    title = models.CharField(max_length=100)
+    link = models.TextField(null=True, blank=True)
+    dateAndPlace = models.CharField(max_length=100)
+    speaker = models.CharField(max_length=100)
+    ref = models.CharField(max_length=100, null=True, blank=True)
+    ref_link = models.TextField(null=True, blank=True)
+    img_link = models.TextField(null=True, blank=True)
+    created_date = models.DateTimeField(
+        default=timezone.now
+    )
+    published_date = models.DateTimeField(
+        blank=True, null=True
+    )
+
+    class Meta:
+        """Meta definition for Snail."""
+
+        verbose_name = 'Snail Lecture'
+        verbose_name_plural = 'Snail Lectures'
