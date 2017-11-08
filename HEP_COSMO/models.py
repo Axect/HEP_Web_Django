@@ -101,6 +101,7 @@ class Snail(models.Model):
     year = models.CharField(max_length=10)
     title = models.CharField(max_length=100)
     link = models.TextField(null=True, blank=True)
+    abstract = models.TextField(null=True, blank=True)
     dateAndPlace = models.CharField(max_length=100)
     speaker = models.CharField(max_length=100)
     ref = models.CharField(max_length=100, null=True, blank=True)
