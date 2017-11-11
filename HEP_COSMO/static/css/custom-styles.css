@@ -236,10 +236,9 @@ ul{
     color: rgb(150,10,10);
 }
 
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+.vertical-align {
+    display: flex;
+    align-items: center;
 }
 
 .wrapper{
