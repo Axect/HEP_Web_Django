@@ -236,6 +236,10 @@ ul{
     color: rgb(150,10,10);
 }
 
+.middlecontainer{
+    vertical-align: middle;
+}
+
 .wrapper{
     padding: 60px 0;
 }
