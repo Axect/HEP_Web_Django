@@ -566,12 +566,12 @@ ul{
 -------------------------------------------------------*/
 .banner{
     background: url(../images/banner3.jpg) no-repeat;
-    height: 660px;
+    height: 440px;
     border-radius: 5px;
 }
 .box1, .box2, .box3, .box4{
     width: 50%;
-    height: 330px;
+    height: 220px;
     background: url(../images/dot.png);
     float: left;
     position: relative;
