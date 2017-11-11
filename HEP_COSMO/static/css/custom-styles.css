@@ -236,8 +236,10 @@ ul{
     color: rgb(150,10,10);
 }
 
-.middlecontainer{
+.vcenter {
+    display: inline-block;
     vertical-align: middle;
+    float: none;
 }
 
 .wrapper{
