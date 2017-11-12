@@ -43,8 +43,8 @@ def research(request):
     return render(request, 'HEP/research.html', {})
 
 def publish(request):
-    articles = Article.objects.all().order_by('index')
-    persons = People.objects.all().order_by('index')
+    articles = Article.objects.all().order_by('-index')
+    persons = People.objects.all().order_by('-index')
     temp = []
     personlist = []
     [personlist.append(' ' + person.name) for person in persons]
