@@ -165,6 +165,13 @@ ul{
 .dlist ul li span {
     color: rgb(150,10,10);
 }
+.dlist ul li ul{
+  list-style-type: circle;
+}
+.dlist ul li ul li{
+  font-size: 12px;
+  color: rgb(195, 203, 216)
+}
 /* For Seminar */
 .elist {
 
