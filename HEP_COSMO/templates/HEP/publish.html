@@ -121,7 +121,9 @@
                                     {% if article.journal !=  None %}
                                         <a href="{{ article.hyperlink }}" target="_blank">{{ article.journal }}</a>
                                     {% endif %}
+                                    {% if article.arxiv != None %}
                                     <a href="{{ article.arxivlink }}" target="_blank">{{ article.arxiv }}</a>
+                                    {% endif %}
                                 </li>
                             {% endif %}
                             {% endfor %}
