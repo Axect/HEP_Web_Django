@@ -165,9 +165,6 @@ ul{
 .dlist ul li span {
     color: rgb(150,10,10);
 }
-.dlist ul li ol {
-  list-style-type: none;
-}
 /* For Seminar */
 .elist {
 
@@ -218,7 +215,7 @@ ul{
 
 }
 .ilist ul {
-    list-style-type: square;
+    list-style-type: circle;
     padding-right: 15px;
     padding-left: 30px;
     margin-right: auto;
@@ -226,17 +223,7 @@ ul{
 }
 .ilist ul li{
     font-family: 'Crimson Text', serif;
-    font-size: 16px;
-    margin: 8px;
-}
-.ilist ul li a {
-    display: inline;
-    border-style: none;
-    list-style: none;
-    font-size: 15px;
-}
-.ilist ul li span {
-    color: rgb(150,10,10);
+    font-size: 12px;
 }
 
 .vertical-align {
