@@ -119,7 +119,7 @@
                                     {% endwith %}
                                      &#12300;<span><i>{{ article.title }}</i></span>&#12301;
                                     {% if article.journal !=  None %}
-                                        <a href="{{ article.hyperlink }}" target="_blank">{{ article.journal }}</a>
+                                        <a href="{{ article.hyperlink }}" target="_blank">[{{ article.journal }}]</a>
                                     {% endif %}
                                     {% if article.arxiv != None %}
                                     <a href="{{ article.arxivlink }}" target="_blank">{{ article.arxiv }}</a>
