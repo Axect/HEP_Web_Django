@@ -67,8 +67,7 @@ ul{
 /* For all */
 .bg {
     background-image: url("../images/snail_background.jpg");
-    height: 1031px;
-    width: 2090px;
+    width: 100%;
 
     background-position: center;
     background-size: cover;
