@@ -118,7 +118,7 @@
                     <li>
                         <span>- Topics:</span>
                         <ul>
-                            {% with seminar.topic|split:',' as topics %}
+                            {% with seminar.topic|split:',,' as topics %}
                             {% for topic in topics %}
                                 {% if topic != None %}
                                     <li>{{topic|strip}}</li>
