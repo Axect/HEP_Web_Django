@@ -54,3 +54,6 @@ def publish(request):
     years = []
     [years.append(year) for year in temp if year not in years]
     return render(request, 'HEP/publish.html', {'articles': articles, 'yearlist': years, 'personlist': personlist})
+
+def job(request):
+    return render(request, 'HEP/job.html', {})
