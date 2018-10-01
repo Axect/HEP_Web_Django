@@ -75,7 +75,7 @@
     <div class="main-title">
         <div class="row">
             <div class="col-sm-12 col-md-9">
-                <h1>Seminar</h1>
+                <h1>Job</h1>
             </div>
             <div class=" col-sm-12 col-md-3">
             </div>
@@ -88,62 +88,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            <!-- <div class="blist">
-                <div class="ruler"></div>
-                <ul>
-                    <li><a href="#">2017 Summer</a></li>
-                </ul>
-            </div> -->
-
-            {% for seminar in seminars %}
-            <div class="elist">
-                <br>
-                <p>{{seminar.title}}</p>
-                <ul>
-                    <li><span>
-                        - {{seminar.date_start}}
-                        {% if seminar.date_end != None%}
-                            - {{seminar.date_end}}
-                        {% endif %}
-                        ,&nbsp; {{seminar.place}}
-                    </span></li>
-                    <li><span>- {{seminar.lecturer}}  </span></li>
-                    <li><span>
-                        - References:
-                        {% for ref, link in seminar.zipped %}
-                             {% if ref != none %}
-                                <a href="{{link}}", target="_blank">{{ref}}</a>,&nbsp;
-                            {% endif %}
-                        {% endfor %}
-                    </span></li>
-                    <li>
-                        <span>- Topics:</span>
-                        <ul>
-                            {% with seminar.topic|split:',,' as topics %}
-                            {% for topic in topics %}
-                                {% if topic != None %}
-                                    <li>{{topic|strip}}</li>
-                                {% endif %}
-                            {% endfor %}
-                            {% endwith %}
-                        </ul>
-                    </li>
-                    <li>
-                        <span>- Schedules:</span>
-                        <ul>
-                            {% with seminar.schedule|split:',' as schedules %}
-                            {% for schedule in schedules %}
-                                {% if schedule != None %}
-                                    <li>{{schedule|strip}}</li>
-                                {% endif %}
-                            {% endfor %}
-                            {% endwith %}
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="ruler"></div>
-            {% endfor %}
+            <h2 style="text-align: center">Postdoctoral Researcher</h2>
         </div>
     </div>
 </div>
