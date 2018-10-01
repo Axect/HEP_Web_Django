@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load spliter %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -57,10 +58,10 @@
                               <ul class="dropdown-menu">
                                   <li><a href="arxiv">ArXiV</a></li>
                                   <li><a href="finedust">Fine Dust</a></li>
-                                  <li class="active"><a href="link">Other Sites</a></li>
+                                  <li><a href="link">Other Sites</a></li>
                               </ul>
                           </li>
-                          <li><a href="job">Job</a></li>
+                          <li class="active"><a href="job">Job</a></li>
                           <li><a href="contact">How to reach Us</a></li>
                       </ul>
                     </div><!-- /.navbar-collapse -->
@@ -73,37 +74,84 @@
 <div class="container">
     <div class="main-title">
         <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <h1>Other Sites</h1>
+            <div class="col-sm-12 col-md-9">
+                <h1>Seminar</h1>
+            </div>
+            <div class=" col-sm-12 col-md-3">
             </div>
         </div>
     </div>
     <div class="ruler"></div>
 </div>
 
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            <div class="blist">
+            <!-- <div class="blist">
+                <div class="ruler"></div>
                 <ul>
-                    <li><a href="http://inspirehep.net/" target="_blank">Inspire HEP</a></li><br/>
-                    <div class="ruler"></div>
-                    <li><a href="http://cms-results.web.cern.ch/cms-results/public-results/publications/" target="_blank">CMS Results</a></li><br/>
-                    <div class="ruler"></div>
-                    <li><a href="https://twiki.cern.ch/twiki/bin/view/AtlasPublic" target="_blank">ATLAS Results</a></li><br/>
-                    <div class="ruler"></div>
-                    <li><a href="http://www.kias.re.kr/" target="_blank">KIAS</a></li><br/>
-                    <div class="ruler"></div>
-                    <li><a href="https://www.apctp.org/main/" target="_blank">APCTP</a></li><br/>
-                    <div class="ruler"></div>
-                    <li><a href="https://indico.ibs.re.kr/event/115/" target="_blank">IBS-CTPU, PTC Group Seminar</a></li>
+                    <li><a href="#">2017 Summer</a></li>
+                </ul>
+            </div> -->
+
+            {% for seminar in seminars %}
+            <div class="elist">
+                <br>
+                <p>{{seminar.title}}</p>
+                <ul>
+                    <li><span>
+                        - {{seminar.date_start}}
+                        {% if seminar.date_end != None%}
+                            - {{seminar.date_end}}
+                        {% endif %}
+                        ,&nbsp; {{seminar.place}}
+                    </span></li>
+                    <li><span>- {{seminar.lecturer}}  </span></li>
+                    <li><span>
+                        - References:
+                        {% for ref, link in seminar.zipped %}
+                             {% if ref != none %}
+                                <a href="{{link}}", target="_blank">{{ref}}</a>,&nbsp;
+                            {% endif %}
+                        {% endfor %}
+                    </span></li>
+                    <li>
+                        <span>- Topics:</span>
+                        <ul>
+                            {% with seminar.topic|split:',,' as topics %}
+                            {% for topic in topics %}
+                                {% if topic != None %}
+                                    <li>{{topic|strip}}</li>
+                                {% endif %}
+                            {% endfor %}
+                            {% endwith %}
+                        </ul>
+                    </li>
+                    <li>
+                        <span>- Schedules:</span>
+                        <ul>
+                            {% with seminar.schedule|split:',' as schedules %}
+                            {% for schedule in schedules %}
+                                {% if schedule != None %}
+                                    <li>{{schedule|strip}}</li>
+                                {% endif %}
+                            {% endfor %}
+                            {% endwith %}
+                        </ul>
+                    </li>
                 </ul>
             </div>
+            <div class="ruler"></div>
+            {% endfor %}
         </div>
     </div>
 </div>
 
-<br/><br/><br/>
+
+
+
+
 <div class="container">
     <div class="site-footer">
         <div class="row">
@@ -116,7 +164,7 @@
             <div class="col-sm-6 col-md-6">
                 <div class="block">
                     <h2>copyrights</h2>
-                    <a href="#">@Yonsei HEP-COSMO group. All rights reserved</a>
+                    <a href="https://sites.google.com/site/yonseihepcosmo/" target="_blank">@Yonsei HEP-COSMO group. All rights reserved</a>
                 </div>
             </div>
         </div>
