@@ -44,7 +44,7 @@ class People(models.Model):
     index = models.CharField(max_length=5)
     name = models.CharField(max_length=30)
     email = models.CharField(max_length=100)
-    location = models.CharField(max_length=20)
+    location = models.CharField(max_length=100)
     link = models.TextField(null=True, blank=True)
     img = models.TextField(null=True, blank=True)
 
