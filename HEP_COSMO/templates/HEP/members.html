@@ -117,7 +117,9 @@
                                             <ul>
                                                 <li>Email: {{ person.email }}</li>
                                                 <li>Location: {{ person.location }}</li>
+                                                {% if person.link is not None %}
                                                 <li>Homepage: <a href="{{ person.link }}", target="_blank">{{ person.link }}</a></li>
+                                                {% endif %}
                                             </ul>
                                         </div><br />
                                         <div class="ruler"></div>
